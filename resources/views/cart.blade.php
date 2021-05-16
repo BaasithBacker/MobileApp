@@ -73,7 +73,7 @@
                       </div> --}}
                     </td>
                     <td>
-                      <h5>{{ $i->qtyprice }}</h5>
+                      <h5>Rs.{{ $i->qtyprice }}</h5>
                     </td>
 
                     <td>
@@ -84,7 +84,7 @@
                   
                   <tr class="bottom_button">
                     <td>
-                      <a class="btn_1" href="/shop">Update Cart</a>
+                      <a class="btn_1" href="/Cshop">Update Cart</a>
                     </td>
                     <td></td>
                     <td></td>
@@ -101,7 +101,7 @@
                       <h5>Subtotal</h5>
                     </td>
                     <td>
-                      <h5>{{ $total }}</h5>
+                      <h5>Rs.{{ $total }}</h5>
                     </td>
                   </tr>
                   <tr class="shipping_area">
@@ -128,7 +128,7 @@
                 </tbody>
               </table>
               <div class="checkout_btn_inner float-right">
-                <a class="btn_1" href="#">Continue Shopping</a>
+                <a class="btn_1" href="/Cshop">Continue Shopping</a>
                 <a class="btn_1 checkout_btn_1" href="/checkout">Proceed to checkout</a>
               </div>
             </div>
