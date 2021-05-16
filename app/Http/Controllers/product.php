@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\login;
 use App\Models\category;
 use App\Models\brand;
 use App\Models\item;
 use App\Models\cart;
+use App\Models\order;
 use Illuminate\support\Facades\DB;
 use Session;
+use Carbon\Carbon;
 
 class product extends Controller
 {
@@ -224,34 +227,35 @@ class product extends Controller
 
 public function order(Request $request)
     {
-        $userId= CustomerModel::where('cmail','=', session('LoggedUser'))->first();
-        $carts=DB::table('cart_models')
-        ->where('customer_id','=',$userId->id)->get();
+        $userId=session::get('sname')['id'];
+        $carts=DB::table('carts')
+        ->where('userid','=',$userId)->get();
+        
         $cdate = Carbon::now();
         $odate=$cdate->toDateString();
         foreach($carts as $cart)
         {
-            $products=DB::table('book_models')
-            ->where('id','=',$cart->book_id)->get();
+            $products=DB::table('items')
+            ->where('id','=',$cart->productid)->get();
             foreach($products as $product)
             {
-                $order=new OrderModel();
-                $order->cid=$userId->id;
-                $order->proid=$cart->book_id;
+                $order=new order();
+                $order->cid=$userId;
+                $order->proid=$cart->productid;
                 $order->oqty=$cart->qty;
-                $order->oprice=$product->bprice;
-                $order->ototal=($cart->qty)*($product->bprice);
+                $order->oprice=$product->isprice;
+                $order->ototal=($cart->qty)*($product->isprice);
                 $order->odate=$cdate;
                 $order->save(); 
                 
-                DB::table('book_models')
-                ->where('id', $cart->book_id)
-                ->update(['bstock' => ($product->bstock-$cart->qty)]);
+                DB::table('items')
+                ->where('id', $cart->productid)
+                ->update(['istock' => ($product->istock-$cart->qty)]);
 
-                DB::table('cart_models')->delete($cart->id);
+                DB::table('carts')->delete($cart->id);
             }
         }
-        return redirect('/success');
+        return redirect('/CHome');
     }
 
     //  function checkout()

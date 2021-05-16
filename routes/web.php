@@ -183,3 +183,6 @@ route::get('/cart',[product::class,'cartlist']);
 route::get('removecart/{id}',[product::class,'destroy']);
 
 route::get('checkout',[product::class,'payment']);
+
+
+route::post('/order',[product::class,'order']);
