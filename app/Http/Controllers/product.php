@@ -135,6 +135,13 @@ class product extends Controller
     }
 
 
+    function myorder(){
+        $userid=session::get('sname')['id'];
+        $c=order::where('cid','=',$userid)-> with('customer','order')->get();
+        return view('/Corders',compact('c'));
+    }
+
+
 
     function cartlist()
     {

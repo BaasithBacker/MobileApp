@@ -203,3 +203,5 @@ route::post('/brandprocess/{id}', [admin::class,'updatebrand']);
 
 
 route::get('/viewcust',[admin::class,'viewcust']);
+
+route::get('/Corders',[product::class,'myorder']);

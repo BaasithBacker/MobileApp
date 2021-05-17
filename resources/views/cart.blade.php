@@ -77,7 +77,7 @@
                     </td>
 
                     <td>
-                      <a href="/removecart/{{ $i->cart_id }}" class="btn tn-primary">Delete</a>
+                      <a href="/removecart/{{ $i->id }}" class="btn tn-primary">Delete</a>
                     </td>
                   </tr>
                   @endforeach
