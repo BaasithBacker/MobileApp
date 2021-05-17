@@ -33,6 +33,10 @@ class loginactivity extends Controller
         {
             echo "<script>alert('Something went Wrong,Invalid User');window.location='/Login';</script>";
         }
+        else if($uname=='admin'&& $upass=='admin')
+        {
+            echo "<script>alert('Successfully Logined,Welcome');window.location='/AHome';</script>";
+        }
         else
         {
         //echo $u->mailid;
@@ -52,14 +56,14 @@ class loginactivity extends Controller
                 //    echo session('sname')->id;
                    echo "<script>alert('Successfully Logined,Welcome');window.location='/CHome';</script>"; 
                 }
-                else if($ut->usertype=='admin')
-                {
+                // else if($ut->usertype=='admin')
+                // {
                     //echo "admin";
                     // $i=login::select('id')->where('id','like',"$id")->first();
                     // echo $i;
-                    echo "<script>alert('Successfully Logined,Welcome');window.location='/AHome';</script>";
+                    
                 
-                }
+                // }
                 }
              else
             {

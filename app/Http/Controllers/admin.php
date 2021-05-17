@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\category;
 use App\Models\brand;
 use App\Models\item;
-
+use App\Models\login;
 
 
 class admin extends Controller
@@ -172,6 +172,15 @@ class admin extends Controller
         return redirect('/viewitem');
     }
 
+
+    public function viewcat()
+    {
+        $c=category::all();
+
+        return view('Viewcat',compact('c'));
+    }
+
+
     public function viewitem()
     {
         $item=item::all();
@@ -179,6 +188,25 @@ class admin extends Controller
         return view('viewitem',compact('item'));
     }
 
+    public function viewbrand()
+    {
+        $item=brand::all();
+
+        return view('viewbrand',compact('item'));
+    }
+
+    public function viewcust()
+    {
+        $item=login::all();
+
+        return view('viewcust',compact('item'));
+    }
+
+    public function editbrand($id)
+    {
+        $item=brand::find($id);
+        return view('editbrand',compact('item'));
+    }
 
     public function edititem($id)
     {
@@ -186,6 +214,76 @@ class admin extends Controller
         return view('edititem',compact('item'));
 
     }
+
+    public function destroycat($id)
+    {
+        $item=category::find($id);
+
+        $item->delete();
+
+        return redirect('/viewcat');
+    }
+
+    public function deletecat($id)
+    {
+        $item=category::find($id);
+        return view('deletecat',compact('item'));
+
+    }
+ 
+
+    public function editcat($id)
+    {
+        $item=category::find($id);
+        return view('editcat',compact('item'));
+
+    }
+
+
+    public function updatecat(Request $request, $id)
+    {
+        $cname=request('name');
+        $desc=request('desc');
+
+        $this->validate($request,[
+            'name'=>'required',
+            'desc'=>'required'
+        ]);
+
+        $c = category::find($id);
+
+        $c->name=$cname;
+        $c->desc=$desc;
+
+        $c->save();
+        echo "<script>alert('Successfully Updated Category');window.location='/viewcat';</script>";
+        // echo "success";
+
+    }
+
+    public function updatebrand(Request $request, $id)
+    {
+        $cname=request('name');
+        $desc=request('desc');
+
+        $this->validate($request,[
+            'name'=>'required',
+            'desc'=>'required'
+        ]);
+
+        $c = brand::find($id);
+
+        $c->bname=$cname;
+        $c->desc=$desc;
+
+        $c->save();
+        echo "<script>alert('Successfully Updated Brand');window.location='/viewbrand';</script>";
+        // echo "success";
+
+    }
+
+
+
     /**
      * Display the specified resource.
      *

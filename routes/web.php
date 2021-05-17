@@ -155,6 +155,10 @@ Route::post('/storeitem',[admin::class,'storeitem']);
 
 route::get('/viewitem',[admin::class,'viewitem']);
 
+route::get('/viewcat',[admin::class,'viewcat']);
+
+route::get('/viewbrand',[admin::class,'viewbrand']);
+
 route::get('/shop',[customer::class,'viewproduct']);
 
 route::get('/Cshop',[customer::class,'viewproduct1']);
@@ -172,7 +176,7 @@ route::post('/itemprocess/{id}', [admin::class,'updateitem']);
 
 
 
- route::get('/deleteitem/{id}', [admin::class,'deleteview']);
+route::get('/deleteitem/{id}', [admin::class,'deleteview']);
 
 route::post('/itemdelete/{id}',[admin::class,'destroyitem']);
 
@@ -186,3 +190,16 @@ route::get('checkout',[product::class,'payment']);
 
 
 route::post('/order',[product::class,'order']);
+
+route::get('/editcat/{id}', [admin::class,'editcat']);
+route::post('/catprocess/{id}', [admin::class,'updatecat']);
+
+route::get('/deletecat/{id}', [admin::class,'deletecat']);
+route::post('/catdelete/{id}',[admin::class,'destroycat']);
+
+
+route::get('/editbrand/{id}', [admin::class,'editbrand']);
+route::post('/brandprocess/{id}', [admin::class,'updatebrand']);
+
+
+route::get('/viewcust',[admin::class,'viewcust']);

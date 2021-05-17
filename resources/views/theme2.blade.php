@@ -57,8 +57,10 @@
                                     <li><a href="#">View</a>    
                                         <ul class="submenu">
                                             <li><a href="#">View Report's</a></li>
-                                            <li><a href="#">View Customer's</a></li>
+                                            <li><a href="/viewcust">View Customer's</a></li>
                                             <li><a href="/viewitem">View Item's</a></li>
+                                            <li><a href="/viewcat">View Category</a></li>
+                                            <li><a href="/viewbrand">View Brand</a></li>
                                             <li><a href="#">View FeedBack</a></li>
                                         </ul>
                                     </li>
