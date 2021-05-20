@@ -61,23 +61,30 @@
                                             <li><a href="/viewitem">View Item's</a></li>
                                             <li><a href="/viewcat">View Category</a></li>
                                             <li><a href="/viewbrand">View Brand</a></li>
-                                            <li><a href="#">View FeedBack</a></li>
+                                            <li><a href="/Afeedback">View FeedBack's</a></li>
                                         </ul>
                                     </li>
                                     
 
                                     <li><a href="/logout">Logout</a></li>
+                                    {{-- <form class="d-flex" method="POST" action="">
+                                        <input class="form-control me-2" type="date" placeholder="DATE" aria-label="Search">
+                                        <button class="btn btn-success" type="submit">Search</button>
+                                      </form> --}}
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header Right -->
                         <div class="header-right">
+                            
                             <ul>
-                                <li>
+                                
+                                
+                                {{-- <li>
                                     <div class="nav-search search-switch">
                                         <span class="flaticon-search"></span>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li> <a href="/sessiondelete"><span class="flaticon-user"></span></a></li>
                                 
                             </ul>

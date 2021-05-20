@@ -7,6 +7,7 @@ use App\Models\category;
 use App\Models\brand;
 use App\Models\item;
 use App\Models\login;
+use App\Models\feedback;
 
 
 class admin extends Controller
@@ -361,4 +362,13 @@ class admin extends Controller
     {
         //
     }
+
+    public function viewfeed()
+    {
+        $item=feedback::all();
+
+        return view('Afeedback',compact('item'));
+    }
+
+    
 }

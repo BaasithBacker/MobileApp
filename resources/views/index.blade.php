@@ -95,7 +95,7 @@
                             </div>
                             <div class="product-caption">
                                 <h3><a href="product_details.html">Red Silicon Case</a></h3>
-                                <span>$ 10</span>
+                                <span>Rs. 1000</span>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                             </div>
                             <div class="product-caption">
                                 <h3><a href="product_details.html">Screen Guard</a></h3>
-                                <span>$ 5</span>
+                                <span>Rs. 500</span>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="product-caption">
                                 <h3><a href="product_details.html">Black Silicon Case</a></h3>
-                                <span>$ 7</span>
+                                <span>Rs. 700</span>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
         </div>
         <!-- Gallery Area End -->
         <!--? Popular Items Start -->
-        <div class="popular-items section-padding30">
+        {{-- <div class="popular-items section-padding30">
             <div class="container">
                 <!-- Section tittle -->
                 <div class="row justify-content-center">
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Popular Items End -->
         <!--? Video Area Start -->
        

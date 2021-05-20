@@ -16,21 +16,42 @@ use App\Http\Controllers\product;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/Login', function () {
+//     return view('login');
+// });
+
+Route::get('/Register', function () {
+    return view('register');
+});
+
+
+
+
+Route::post('/Register1',[loginactivity::class,'store']);
+
 
 Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/Login',[loginactivity::class,'login']);
+
+
+Route::post('/Login1',[loginactivity::class,'check']);
+
+
+route::get('/logout',function(){
+    Session::forget('sname');
+    return redirect('/index');
+});
+
+Route::group(['middleware'=>['LoginCheck']], function(){
+
+
 // Route::get('/shop', function () {
 //     return view('shop');
 // });
 
-
-Route::get('/Login', function () {
-    return view('login');
-});
-
-Route::post('/Login1',[loginactivity::class,'check']);
 
 
 Route::get('/about', function () {
@@ -68,12 +89,7 @@ Route::get('/elements', function () {
 // });
 
 
-Route::get('/Register', function () {
-    return view('register');
-});
 
-
-Route::post('/Register1',[loginactivity::class,'store']);
 
 
 Route::get('/Contact', function () {
@@ -141,10 +157,7 @@ Route::get('/AItem2',[admin::class,'index']);
 //     return view('/index');
 // });
 
-route::get('/logout',function(){
-    Session::forget('sname');
-    return redirect('/index');
-});
+
 
 Route::get('/index', function () {
     return view('index');
@@ -205,3 +218,14 @@ route::post('/brandprocess/{id}', [admin::class,'updatebrand']);
 route::get('/viewcust',[admin::class,'viewcust']);
 
 route::get('/Corders',[product::class,'myorder']);
+
+route::get('/feedback/{id}',[customer::class,'custVfeedback']);
+
+route::post('/feedback1/{id}',[customer::class,'storecustVfeedback']);
+
+route::get('/Afeedback',[admin::class,'viewfeed']);
+
+route::get('/Areport',[admin::class,'viewfeed']);
+
+
+});

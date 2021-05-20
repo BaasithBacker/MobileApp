@@ -13,6 +13,13 @@ class loginactivity extends Controller
      * @return \Illuminate\Http\Response
      */
 
+
+    public function login()
+    {
+        return view('/Login');
+    }
+
+
     
         public function check(Request $request)
     {
@@ -29,13 +36,16 @@ class loginactivity extends Controller
 
         $u=login::select('email')->where('email','like',"$uname")->first();
         
-        if(!$u)
+        if($uname=='admin'&& $upass=='admin')
+        {
+           
+            $request->session()->put('sname','admin');
+            echo "<script>alert('Successfully Logined,Welcome');window.location='/AHome';</script>";
+            
+        }
+        else if(!$u)
         {
             echo "<script>alert('Something went Wrong,Invalid User');window.location='/Login';</script>";
-        }
-        else if($uname=='admin'&& $upass=='admin')
-        {
-            echo "<script>alert('Successfully Logined,Welcome');window.location='/AHome';</script>";
         }
         else
         {

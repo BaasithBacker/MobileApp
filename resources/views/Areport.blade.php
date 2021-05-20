@@ -30,7 +30,7 @@
                 <td>{{ $i->oprice }}</td>
                 <td>{{ $i->ototal }}</td>
   
-                <td><a class="btn btn-primary" href={{"/feedback/".$i->id}}>ADD FEEDBACK</a></td>
+                {{-- <td><a class="btn btn-primary" href={{"/feedback/".$i->id}}>ADD FEEDBACK</a></td> --}}
                 {{-- <td><a class="btn btn-danger"  href={{"/deletecat/".$i->id}}>DELETE</a></td> --}}
             
             </tr>

@@ -54,10 +54,10 @@
                                     <li><a href="#">Pages</a>
                                         <ul class="submenu">
                                             <li><a href="/Login">Login</a></li>
-                                            <li><a href="/cart">Cart</a></li>
+                                            {{-- <li><a href="/cart">Cart</a></li> --}}
                                            
-                                            <li><a href="/confirmation">Confirmation</a></li>
-                                            <li><a href="/checkout">Product Checkout</a></li>
+                                            {{-- <li><a href="/confirmation">Confirmation</a></li>
+                                            <li><a href="/checkout">Product Checkout</a></li> --}}
                                         </ul>
                                     </li>
                                     <li><a href="/Contact">Contact</a></li>

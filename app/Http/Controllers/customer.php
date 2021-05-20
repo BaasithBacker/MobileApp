@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\category;
 use App\Models\brand;
 use App\Models\item;
+use App\Models\order;
+use App\Models\feedback;
 
 class customer extends Controller
 {
@@ -110,5 +112,25 @@ class customer extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function custVfeedback($id)
+    {
+        $item=order::find($id);
+        return view('feedback',compact('item'));
+    }
+
+    public function storecustVfeedback($id , Request $request)
+    {
+        $getcom=request('comment');
+
+        $f=new feedback();
+
+        $f->cname=session('sname')->name;
+        $f->oid=$id;
+        $f->comments=$getcom;
+
+        $f->save();
+        return redirect('/Corders');
     }
 }

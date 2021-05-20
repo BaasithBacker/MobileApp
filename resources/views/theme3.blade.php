@@ -54,8 +54,9 @@
                                     <li><a href="#">Pages</a>
                                         <ul class="submenu">
                                             <li><a href="/Corders">MyOrders</a></li>
-                                            <li><a href="/logout">Logout</a></li>
+                                            
                                             <li><a href="/cart">Cart</a></li>
+                                            <li><a href="/logout">Logout</a></li>
                                            
                                             {{-- <li><a href="/confirmation">Confirmation</a></li>
                                             <li><a href="/checkout">Product Checkout</a></li> --}}
