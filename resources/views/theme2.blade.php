@@ -56,7 +56,7 @@
 
                                     <li><a href="#">View</a>    
                                         <ul class="submenu">
-                                            <li><a href="#">View Report's</a></li>
+                                            <li><a href="/viewreport">View Report's</a></li>
                                             <li><a href="/viewcust">View Customer's</a></li>
                                             <li><a href="/viewitem">View Item's</a></li>
                                             <li><a href="/viewcat">View Category</a></li>

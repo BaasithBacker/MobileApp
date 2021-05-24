@@ -243,51 +243,47 @@ public function order(Request $request)
         return redirect('/CHome');
     }
 
-    //  function checkout()
-    //  {
-    //     $userid=session::get('sname')['id'];
-    //     $item=DB::table('carts')
-    //     ->join('items','carts.productid','=','items.id')
-    //     ->where('carts.userid',$userid)
-    //     ->select('items.*','carts.id as cart_id')
-    //     ->get();
-    //     $total=$item=DB::table('carts')
-    //     ->join('items','carts.productid','=','items.id')
-    //     ->where('carts.userid',$userid)
-    //     ->sum('items.isprice');
-        
-        // print_r($item);
-        // echo $total;
-        // return view('checkout',compact('total','item'));
+ public function getproduct(Request $request)
+ {
+    $getitem=request('item');
+    $itemid=item::where('imodel','=',$getitem)->first();
+    if(!$itemid)
+    {
+        echo "<script>alert('Item not found');window.location='/Cshop';</script>";  
+    }
+    else
+    {
+        $shops=item::query()
+    ->where('imodel', 'LIKE' , "%{$itemid->imodel}%")
+    ->get();
+    }
+    
+    return view('Cshop',compact('shops'));
+ }
 
-        // $userid1=session::get('sname')['id'];
-        // $item1=DB::table('carts')
-        // ->join('items','carts.productid','=','items.id')
-        // ->where('carts.userid',$userid1)
-        // ->select('items.*','carts.id as cart_id')
-        // ->get();
+ public function getproduct1(Request $request)
+ {
+    $getitem=request('item');
+    $itemid=item::where('imodel','=',$getitem)->first();
+    if(!$itemid)
+    {
+        echo "<script>alert('Item not found');window.location='/shop';</script>";  
+    }
+    else
+    {
+        $shops=item::query()
+    ->where('imodel', 'LIKE' , "%{$itemid->imodel}%")
+    ->get();
+    }
+    
+    return view('shop',compact('shops'));
+ }
 
-        // $i=$item1["iname"];
-        // echo $i;
+ public function search()
+ {
+     return view('theme3');
+ }
 
-
-        
-      
-        // return view('cart',['item'=>$item]);
-       
-
-    //    $item1= cart::join('items','carts.productid','=','items.id')
-    //      ->where('carts.userid',$userid1)
-    //      ->select(
-    //               'items.iname' 
-                 
-    //       )
-    //      ->get();
-       
-                
-        //   echo "$item1[0]";
-        //  return view('checkout',compact('total','item1'));
-    //  }
 }
 
 

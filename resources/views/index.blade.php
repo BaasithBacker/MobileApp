@@ -36,10 +36,10 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your New Perfect Style</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Choose Perfect Style.</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                        <a href="shop" class="btn hero-btn">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your New Perfect Style</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Choose Perfect Style.</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="industries.html" class="btn hero-btn">Shop Now</a>
@@ -293,8 +293,8 @@
                     <div class="col-lg-5 col-md-6">
                         <div class="watch-details mb-40">
                             <h2>BackCases of Choice</h2>
-                            <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                            <a href="shop.html" class="btn">Show Cases</a>
+                            <p>New Arrivals</p>
+                            <a href="shop" class="btn">Show Cases</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-10">
@@ -312,8 +312,8 @@
                     <div class="col-lg-5 col-md-6">
                         <div class="watch-details mb-40">
                             <h2>ScreenProtectors of Choice</h2>
-                            <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                            <a href="shop.html" class="btn">Show Glass</a>
+                            <p>New Arrivals</p>
+                            <a href="shop" class="btn">Show Glass</a>
                         </div>
                     </div>
                 </div>

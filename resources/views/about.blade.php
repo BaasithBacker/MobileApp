@@ -38,16 +38,16 @@
                     <div class="offset-xl-1 col-lg-8">
                         <div class="about-details-cap mb-50">
                             <h4>Our Mission</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                            <p>With unique strategies and a notion to think outside the box, NextGen is a leading shopping portal in India. Tied up with all the major franchises, we look to bring the best of all worlds, with a dash of our own style.
                             </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <p> With a penchant for creativity, and a simple idea with big dreams, NextGen was started in 2021. Realizing the difficulty in getting our hands on premium merch in India, Cover It Up was established to change this for the better.</p>
                         </div>
 
                         <div class="about-details-cap mb-50">
                             <h4>Our Vision</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                            <p>We have worked really hard to build a platform to make sure the ever-present Pop Culture shares the same limelight in India just as much as anywhere else. More than hard work and perseverance, this can be attributed to something much more basic- love and adoring the figures we grew up with and wanting to make them a part of our everyday lives.
                             </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <p> Our biggest strength is our team. A lovely group of enigmatic people who share a collective love for Pop Culture, our team finds pleasure in devising both innovative and creative ideas to help us realize our dream of giving the Indian market merchandise from their favourite franchises, while making sure the signature of Cover It Up is not lost on them.</p>
                         </div>
                     </div>
                 </div>

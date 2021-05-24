@@ -8,6 +8,7 @@ use App\Models\brand;
 use App\Models\item;
 use App\Models\login;
 use App\Models\feedback;
+use App\Models\order;
 
 
 class admin extends Controller
@@ -181,6 +182,13 @@ class admin extends Controller
         return view('Viewcat',compact('c'));
     }
 
+
+    public function vieworder()
+    {
+        $item=order::all();
+
+        return view('Viewreport',compact('item'));
+    }
 
     public function viewitem()
     {
@@ -370,5 +378,15 @@ class admin extends Controller
         return view('Afeedback',compact('item'));
     }
 
+    public function getreport()
+    {
+        $getdate1=request('date1');
+        $getdate2=request('date2');
+          
+        $item=order::select('*')
+        ->whereBetween('odate', [$getdate1, $getdate2])->get();
+        
+        return view('Viewreport',compact('item'));
+    }
     
 }

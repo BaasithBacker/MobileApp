@@ -19,12 +19,24 @@ use App\Http\Controllers\product;
 // Route::get('/Login', function () {
 //     return view('login');
 // });
+Route::get('/Contact', function () {
+    return view('contact');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
 
 Route::get('/Register', function () {
     return view('register');
 });
 
+route::get('Hproductdetails/{id}',[product::class,'Hproductdetails']);
 
+
+route::post('/productsearch1',[product::class,'getproduct1']);
+
+route::get('/shop',[customer::class,'viewproduct']);
 
 
 Route::post('/Register1',[loginactivity::class,'store']);
@@ -54,18 +66,16 @@ Route::group(['middleware'=>['LoginCheck']], function(){
 
 
 
-Route::get('/about', function () {
-    return view('about');
-});
+
 
 // Route::get('/cart', function () {
 //     return view('cart');
 // });
 
 
-Route::get('/shop', function () {
-    return view('shop');
-});
+// Route::get('/shop', function () {
+//     return view('shop');
+// });
 
 
 
@@ -92,9 +102,7 @@ Route::get('/elements', function () {
 
 
 
-Route::get('/Contact', function () {
-    return view('contact');
-});
+
 
 
 Route::get('/Category', function () {
@@ -165,6 +173,7 @@ Route::get('/index', function () {
 
 Route::post('/storeitem',[admin::class,'storeitem']);
 
+route::get('/viewreport',[admin::class,'vieworder']);
 
 route::get('/viewitem',[admin::class,'viewitem']);
 
@@ -172,7 +181,7 @@ route::get('/viewcat',[admin::class,'viewcat']);
 
 route::get('/viewbrand',[admin::class,'viewbrand']);
 
-route::get('/shop',[customer::class,'viewproduct']);
+
 
 route::get('/Cshop',[customer::class,'viewproduct1']);
 
@@ -181,7 +190,7 @@ route::get('/CHome',[customer::class,'viewproducthome']);
 
 route::get('productdetails/{id}',[product::class,'productdetails']);
 
-route::get('Hproductdetails/{id}',[product::class,'Hproductdetails']);
+
 
 
 route::get('/edititem/{id}', [admin::class,'edititem']);
@@ -226,6 +235,12 @@ route::post('/feedback1/{id}',[customer::class,'storecustVfeedback']);
 route::get('/Afeedback',[admin::class,'viewfeed']);
 
 route::get('/Areport',[admin::class,'viewfeed']);
+
+route::get('/search',[product::class,'search']);
+
+route::post('/report',[admin::class,'getreport']);
+
+route::post('/productsearch',[product::class,'getproduct']);
 
 
 });

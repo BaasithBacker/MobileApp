@@ -169,14 +169,18 @@
         <!-- Footer End-->
     </footer>
     <!--? Search model Begin -->
+    <section id="search">
     <div class="search-model-box">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-btn">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Searching key.....">
+            <form class="search-model-form" method="POST" action="productsearch">
+                {{ csrf_field() }}
+                <input name="item" type="text" id="search-input" placeholder="Enter Model Name">
+                <button class="btn btn-primary">Search</button>
             </form>
         </div>
     </div>
+</section>
     <!-- Search model end -->
 
     
