@@ -54,7 +54,7 @@
                                     <li><a href="#">Pages</a>
                                         <ul class="submenu">
                                             <li><a href="/Corders">MyOrders</a></li>
-                                            
+                                            <li><a href="/profile">Profile</a></li>
                                             <li><a href="/cart">Cart</a></li>
                                             <li><a href="/logout">Logout</a></li>
                                            

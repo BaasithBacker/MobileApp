@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="container">
-<center><h4 style="font-family:courier;"><b>Delivery Address</b> is same as the address when you sign up!!! <u><a  href="/editprofile">Change address </a></u></h4></center>
+<center><h4 style="font-family:courier;"><b>Delivery Address</b> is same as the address when you sign up!!! <u><a  href="/profile">Change address </a></u></h4></center>
     
     <br><div class="row">
     <div class="col-xs-12 col-md-4"></div>

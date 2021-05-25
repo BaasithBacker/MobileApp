@@ -8,6 +8,8 @@ use App\Models\brand;
 use App\Models\item;
 use App\Models\order;
 use App\Models\feedback;
+use App\Models\login;
+use Session;
 
 class customer extends Controller
 {
@@ -16,6 +18,40 @@ class customer extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function profile()
+    {
+        // $data = ['LoggedUserInfo'=>login::where('name','=', session('sname'))->first()];
+        $data = session::get('sname')['id'];
+        $var = ['var'=>login::where('id','=',$data)->first()];
+    
+        return view ('profile')->with($var);
+    }
+
+    public function editprofile($id)
+    {
+        $customerview=login::find($id);
+
+        return view('editprofile',compact('customerview'));
+    }
+
+
+    public function updateprofile(Request $request, $id)
+    {
+        $l = login::find($id);
+        $uname = request('name');
+        $uaddress = request('address');
+        $upin = request('pincode');
+
+        
+
+        $l->name=$uname;
+        $l->address=$uaddress;
+        $l->pincode=$upin;
+        $l->save();
+
+        return redirect('/profile');
+    }
 
 
     public function viewproduct()

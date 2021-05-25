@@ -242,5 +242,10 @@ route::post('/report',[admin::class,'getreport']);
 
 route::post('/productsearch',[product::class,'getproduct']);
 
+route::get('/profile',[customer::class,'profile']);
+
+route::get('/editprofile/{id}',[customer::class,'editprofile']);
+
+route::post('/customereditprocess/{id}',[customer::class,'updateprofile']);
 
 });
