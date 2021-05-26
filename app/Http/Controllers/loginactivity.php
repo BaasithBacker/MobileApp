@@ -16,7 +16,7 @@ class loginactivity extends Controller
 
     public function login()
     {
-        return view('/Login');
+        return view('Login');
     }
 
 
