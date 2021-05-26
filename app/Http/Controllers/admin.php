@@ -194,7 +194,7 @@ class admin extends Controller
     {
         $item=item::all();
 
-        return view('Viewitem',compact('item'));
+        return view('ViewItem',compact('item'));
     }
 
     public function viewbrand()
