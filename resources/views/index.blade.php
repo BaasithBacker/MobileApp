@@ -36,7 +36,7 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your New Perfect Style</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Choose Perfect Style.</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Choose Perfect Style, The perfect style exists in perfect websites, find your choice</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="shop" class="btn hero-btn">Shop Now</a>
