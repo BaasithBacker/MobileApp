@@ -26,8 +26,8 @@
             </tr>
             @foreach($item as $i)
             <tr>
-                <td>{{ $i->cid }}</td>
-                <td>{{ $i->bid }}</td>
+                <td>{{ $i->category->name }}</td>
+                <td>{{ $i->brand->bname }}</td>
                 <td>{{ $i->imodel }}</td>
                 <td>{{ $i->iname }}</td>
                 <td>{{ $i->isize }}</td>
