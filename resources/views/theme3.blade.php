@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do eiusmod tem.</p>
+                                        <p>Choose Perfect Style, The perfect style exists in perfect websites, find your choice</p>
                                 </div>
                                 </div>
                             </div>
