@@ -155,7 +155,7 @@ class product extends Controller
         //  ->get();
 
 
-         return view('Cshop');
+         return view('index');
     }
 
     static public function totalprice(){
