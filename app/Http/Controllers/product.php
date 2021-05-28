@@ -153,10 +153,10 @@ class product extends Controller
         // ->select('items.*','carts.id as cart_id')
         // ->get();
 
-        $total=$products=DB::table('carts')
-        ->join('items','carts.productid','=','items.id')
-        ->where('carts.userid',$userid)
-        ->sum('carts.qtyprice');
+        // $total=$products=DB::table('carts')
+        // ->join('items','carts.productid','=','items.id')
+        // ->where('carts.userid',$userid)
+        // ->sum('carts.qtyprice');
 
          $item = cart::with('cart')
          ->join('items','carts.productid','=','items.id')
@@ -165,9 +165,27 @@ class product extends Controller
          ->get();
 
 
-         return view('cart',['item'=>$item,'total'=>$total]);
+         return view('cart',['item'=>$item]);
     }
 
+    static public function totalprice(){
+        $custid= session::get('sname')['id'];
+        $customerId=$custid->id;
+        $carts=DB::table('carts')
+        ->where('userid','=', $customerId)->get();
+
+        $total=0;
+        foreach($carts as $cart)
+        {
+            $products=DB::table('items')
+            ->where('id','=',$cart->productid)->get();
+            foreach($products as $product)
+            {
+                $total=$total+($cart->qtyprice);
+            }
+        }
+    return $total;
+    }
 
     public function addtocart(Request $request)
     {
