@@ -158,24 +158,24 @@ class product extends Controller
          return view('cart',['item'=>$item]);
     }
 
-    // static public function totalprice(){
-    //     $custid= session::get('sname')['id'];
-    //     $customerId=$custid->id;
-    //     $carts=DB::table('carts')
-    //     ->where('userid','=', $customerId)->get();
+    static public function totalprice(){
+        $custid= session::get('sname')['id'];
+        $customerId=$custid->id;
+        $carts=DB::table('carts')
+        ->where('userid','=', $customerId)->get();
 
-    //     $total=0;
-    //     foreach($carts as $cart)
-    //     {
-    //         $products=DB::table('items')
-    //         ->where('id','=',$cart->productid)->get();
-    //         foreach($products as $product)
-    //         {
-    //             $total=$total+($cart->qtyprice);
-    //         }
-    //     }
-    // return $total;
-    // }
+        $total=0;
+        foreach($carts as $cart)
+        {
+            $products=DB::table('items')
+            ->where('id','=',$cart->productid)->get();
+            foreach($products as $product)
+            {
+                $total=$total+($cart->qtyprice);
+            }
+        }
+    return $total;
+    }
 
     public function addtocart(Request $request)
     {
