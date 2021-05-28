@@ -148,6 +148,11 @@ class product extends Controller
     {
         $userid=session::get('sname')['id'];
        
+        $test = CartModel::with('book')
+        ->join('book_models','cart_models.book_id','=','book_models.id') 
+         ->where('cart_models.customer_id',$customerId)
+         ->select('cart_models.*')
+        ->get();
 
          $item = cart::with('cart')
          ->join('items','carts.productid','=','items.id')
