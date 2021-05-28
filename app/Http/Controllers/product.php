@@ -159,8 +159,8 @@ class product extends Controller
     }
 
     static public function totalprice(){
-        $custid= session::get('sname')['id'];
-        $customerId=$custid->id;
+        $customerId= session::get('sname')['id'];
+
         $carts=DB::table('carts')
         ->where('userid','=', $customerId)->get();
 
