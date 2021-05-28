@@ -146,18 +146,16 @@ class product extends Controller
 
     function cartlist()
     {
-        $userid=session::get('sname')['id'];
-       
-     
+        // $userid=session::get('sname')['id'];
 
-         $item = cart::with('cart')
-         ->join('items','carts.productid','=','items.id')
-         ->where('carts.userid',$userid)
-         ->select('carts.*')
-         ->get();
+        //  $item = cart::with('cart')
+        //  ->join('items','carts.productid','=','items.id')
+        //  ->where('carts.userid',$userid)
+        //  ->select('carts.*')
+        //  ->get();
 
 
-         return view('cart',['item'=>$item]);
+         return view('Cshop');
     }
 
     static public function totalprice(){
