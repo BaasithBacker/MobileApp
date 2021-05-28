@@ -5,8 +5,8 @@
 
 <body>
    <?php
-use App\Http\Controllers\item;
-$tp=item::totalprice();
+use App\Http\Controllers\product;
+$tp=product::totalprice();
 ?> 
   <header>
     <!-- Header Start -->
