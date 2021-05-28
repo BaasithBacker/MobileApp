@@ -147,11 +147,11 @@ class product extends Controller
     function cartlist()
     {
         $userid=session::get('sname')['id'];
-        $item2=DB::table('carts')
-        ->join('items','carts.productid','=','items.id')
-        ->where('carts.userid',$userid)
-        ->select('items.*','carts.id as cart_id')
-        ->get();
+        // $item2=DB::table('carts')
+        // ->join('items','carts.productid','=','items.id')
+        // ->where('carts.userid',$userid)
+        // ->select('items.*','carts.id as cart_id')
+        // ->get();
 
         $total=$products=DB::table('carts')
         ->join('items','carts.productid','=','items.id')
