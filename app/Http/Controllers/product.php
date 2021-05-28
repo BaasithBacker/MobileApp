@@ -9,9 +9,10 @@ use App\Models\brand;
 use App\Models\item;
 use App\Models\cart;
 use App\Models\order;
-use Illuminate\support\Facades\DB;
+// use Illuminate\support\Facades\DB;
 use Session;
 use Carbon\Carbon;
+use DB;
 
 class product extends Controller
 {
