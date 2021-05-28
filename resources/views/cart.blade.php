@@ -4,7 +4,10 @@
 @section('content')
 
 <body>
-  
+   <?php
+use App\Http\Controllers\item;
+$tp=item::totalprice();
+?> 
   <header>
     <!-- Header Start -->
 
@@ -102,7 +105,7 @@
                       <h5>Subtotal</h5>
                     </td>
                     <td>
-                      {{-- <h5>Rs.{{ $tp }}</h5> --}}
+                      <h5>Rs.{{ $tp }}</h5>
                     </td>
                   </tr>
                   <tr class="shipping_area">
