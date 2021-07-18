@@ -168,7 +168,7 @@ class admin extends Controller
     public function destroyitem($id)
     {
         $item=item::find($id);
-        $c=$order=order::where('id','=',$item->$id);
+        $c=$order=order::where('id','=',$item->$id)->count();
 
         if($c>0)
         {
