@@ -166,7 +166,7 @@ class product extends Controller
             echo "<script>alert('Cart Empty');</script>"; 
             return back();
         }
-         return view('cart',['item'=>$item]));
+         return view('cart',['item'=>$item]);
     }
 
     static public function totalprice(){
