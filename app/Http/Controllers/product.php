@@ -155,8 +155,18 @@ class product extends Controller
          ->select('carts.*')
          ->get();
 
+         $itemc = cart::with('cart')
+         ->join('items','carts.productid','=','items.id')
+         ->where('carts.userid',$userid)
+         ->select('carts.*')
+         ->get()->count();
 
-         return view('cart',['item'=>$item]);
+        if($itemc==0)
+        {
+            echo "<script>alert('Cart Empty');</script>"; 
+            return back();
+        }
+         return view('cart',['item'=>$item]));
     }
 
     static public function totalprice(){
