@@ -168,8 +168,9 @@ class admin extends Controller
     public function destroyitem($id)
     {
         $item=item::find($id);
+        $c=$order=order::where('id','=',$item->$id);
 
-        if($item->delete())
+        if($c>0)
         {
         return redirect('/viewitem');
             echo "<script>alert('Item Deleted Successfully');window.location='/viewitem';</script>";
