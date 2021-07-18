@@ -169,8 +169,7 @@ class admin extends Controller
     {
         $item=item::find($id);
 
-        $item->delete();
-        if($item)
+        if($item->delete())
         {
         return redirect('/viewitem');
             echo "<script>alert('Item Deleted Successfully');window.location='/viewitem';</script>";
