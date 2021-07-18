@@ -54,10 +54,10 @@
                 </div>
                 <div class="col-lg-8">
                 <div class="single_product_text text-center">
-                    <h5>CostPrice:{{ $product['icprice'] }} <br>
+                    <h5>Price:{{ $product['icprice'] }} <br>
                         </h5>
                        
-                        <h4>SellingPrice: Rs.{{ $product['isprice'] }} <br>
+                        <h4>OfferPrice: Rs.{{ $product['isprice'] }} <br>
                         </h4>
                         <form action="/addtocart" method="POST">
                             @csrf
