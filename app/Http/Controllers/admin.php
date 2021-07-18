@@ -177,7 +177,7 @@ class admin extends Controller
         }
         else
         {
-            echo "<script>alert('Cannot delete item! This item has some orders waiting');window.location='/deleteitem';</script>";
+            echo "<script>alert('Cannot delete item! This item has some orders waiting');window.location='/viewitem';</script>";
         }
     }
 
