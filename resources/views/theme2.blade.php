@@ -85,7 +85,7 @@
                                         <span class="flaticon-search"></span>
                                     </div>
                                 </li> --}}
-                                <li> <a href="/sessiondelete"><span class="flaticon-user"></span></a></li>
+                                {{-- <li> <a href="/sessiondelete"><span class="flaticon-user"></span></a></li> --}}
                                 
                             </ul>
                         </div>
