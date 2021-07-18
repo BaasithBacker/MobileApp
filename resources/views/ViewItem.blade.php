@@ -18,8 +18,8 @@
                 <th>ITEM-COLOR</th>
                 <th>ITEM-DESC</th>
                 <th>ITEM-STOCK</th>
-                <th>ITEM-SELLINGPRICE</th>
-                <th>ITEM-COSTPRICE</th>
+                <th>ITEM-OFFERPRICE</th>
+                <th>ITEM-PRICE</th>
                 <th>ITEM-IMAGE</th>
                 <th>UPDATE </th>
                 <th>DELETE </th>
