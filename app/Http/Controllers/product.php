@@ -13,6 +13,7 @@ use App\Models\order;
 use Session;
 use Carbon\Carbon;
 use DB;
+use PDF;
 
 class product extends Controller
 {
@@ -292,6 +293,7 @@ public function order(Request $request)
  {
      return view('theme3');
  }
+
 
 }
 
